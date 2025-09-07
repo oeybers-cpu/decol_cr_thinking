@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Critical Reflection - Decoloniality</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css  ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * {
@@ -206,16 +206,66 @@
             line-height: 1.7;
             color: var(--light);
         }
-        /* NEW: Article Link Style */
-        .article-link {
-            color: var(--digital-purple);
-            text-decoration: underline;
-            font-weight: 600;
+        /* Article Link Box */
+        .article-link-box {
+            background: rgba(20, 20, 30, 0.8);
+            border: 2px solid var(--digital-purple);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
             transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(207, 64, 255, 0.3);
+            position: relative;
+            overflow: hidden;
         }
-        .article-link:hover {
-            color: var(--lighter-accent);
-            text-shadow: 0 0 10px rgba(207, 64, 255, 0.8);
+        .article-link-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(207, 64, 255, 0.1) 0%, transparent 70%);
+            transform: rotate(30deg);
+            z-index: 0;
+        }
+        .article-link-box:hover {
+            box-shadow: 0 0 25px rgba(207, 64, 255, 0.6);
+            transform: translateY(-3px);
+        }
+        .article-link-box h3 {
+            color: var(--digital-purple);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            position: relative;
+            z-index: 1;
+        }
+        .article-link-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--digital-purple);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+            border: 2px solid var(--lighter-accent);
+        }
+        .article-link-button:hover {
+            background: #b020e0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4), 0 0 20px rgba(207, 64, 255, 0.5);
+            color: var(--light);
+        }
+        .article-link-button i {
+            font-size: 1.2rem;
         }
         /* Question Card */
         .question-card {
@@ -340,6 +390,13 @@
                 flex-direction: column;
                 align-items: center;
             }
+            .article-link-box {
+                padding: 20px 15px;
+            }
+            .article-link-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
         }
         @media (max-width: 480px) {
             .top-header h1 {
@@ -355,16 +412,23 @@
             .question-card {
                 padding: 15px;
             }
+            .article-link-box {
+                padding: 15px 10px;
+            }
+            .article-link-button {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
     <div class="grid-lines"></div>
     <div class="nav-banner">
-        <a href="  https://oeybers-cpu.github.io/all125_wk7_s1/  " class="nav-button">
+        <a href="https://oeybers-cpu.github.io/all125_wk7_s1/" class="nav-button">
             <i class="fas fa-arrow-left"></i> Back to Assignment
         </a>
-        <a href="https://oeybers-cpu.github.io/a_lit_models/  " class="nav-button contact-button">
+        <a href="https://oeybers-cpu.github.io/a_lit_models/" class="nav-button contact-button">
             <i class="fas fa-home"></i> Academic Literacy Home
         </a>
     </div>
@@ -373,31 +437,35 @@
     </div>
     <div class="main-container">
         <div class="full-width-card">
+            <h2><i class="fas fa-book-reader"></i> Foundational Text</h2>
+            <p>Before answering the reflection questions, please read the foundational article:</p>
+            
+            <div class="article-link-box">
+                <h3><i class="fas fa-file-pdf"></i> Required Reading</h3>
+                <a href="https://www.ufs.ac.za/docs/librariesprovider43/international-affairs/decolonising-african-education.fv.pdf" class="article-link-button" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Decolonising Education in Africa: What does it mean? (Ndlovu-Gatsheni, 2022)
+                </a>
+            </div>
+            
             <h2><i class="fas fa-comments"></i> Reflective Questions</h2>
-            <p>Take some time to reflect on the concept of decoloniality and its broader implications. Answer the following questions thoughtfully. The questions are based on the foundational article: <a href="https://www.ufs.ac.za/docs/librariesprovider43/international-affairs/decolonising-african-education.fv.pdf" class="article-link" target="_blank">"Decolonising Education in Africa: What does it mean?" by Ndlovu-Gatsheni (2022)</a>.</p>
+            <p>After reading the article, reflect on the following questions thoughtfully:</p>
             
             <div class="question-card">
-                <h3 class="question-title"><i class="fas fa-lightbulb"></i> Question 1: Learning About Decoloniality</h3>
-                <p>What did you learn about decoloniality today? How has your understanding of this concept evolved through reading the article and engaging with the material?</p>
+                <h3 class="question-title"><i class="fas fa-user"></i> Question 1: Positionality & Understanding</h3>
+                <p>How does your own background, identity, and educational experiences shape your understanding of decoloniality? In what ways does the concept of "coloniality of knowledge" challenge or confirm your previous understanding of what counts as valid knowledge in academic settings?</p>
                 <textarea class="textarea" id="question1" placeholder="Write your reflection here..."></textarea>
             </div>
             
             <div class="question-card">
-                <h3 class="question-title"><i class="fas fa-globe-africa"></i> Question 2: Examples of Coloniality</h3>
-                <p>Can you think of examples of coloniality that are not necessarily between Africa and the Global North? What about within Africa or other contexts? How do these examples help you understand the broader applicability of decolonial thinking?</p>
+                <h3 class="question-title"><i class="fas fa-graduation-cap"></i> Question 2: Discipline & Application</h3>
+                <p>How does your academic discipline approach questions of knowledge production, power, and social justice? How might a decolonial perspective enhance or challenge the conventions in your field? What does "re-humanising" education mean to you, and how could it be practically implemented in your academic context?</p>
                 <textarea class="textarea" id="question2" placeholder="Write your reflection here..."></textarea>
             </div>
             
             <div class="question-card">
-                <h3 class="question-title"><i class="fas fa-exchange-alt"></i> Question 3: Migration vs Decoloniality</h3>
-                <p>What is the difference between migration and decoloniality? How might these concepts intersect or diverge in practice, especially in postcolonial contexts?</p>
+                <h3 class="question-title"><i class="fas fa-lightbulb"></i> Question 3: Synthesis & Evolution</h3>
+                <p>Having considered the principles of decoloniality (re-humanising, pluriversalising, deracialising, decolonising the mind) and reflected on your discipline and positionality: What is your key takeaway from this session? How has your understanding of decoloniality and its implications for education evolved, and how might this influence your approach to learning and knowledge?</p>
                 <textarea class="textarea" id="question3" placeholder="Write your reflection here..."></textarea>
-            </div>
-            
-            <div class="question-card">
-                <h3 class="question-title"><i class="fas fa-graduation-cap"></i> Question 4: Decoloniality and Your Discipline</h3>
-                <p>What is the relationship between decoloniality and interpreting one of your discipline's assignments? How might a decolonial lens change how you approach academic work in your field?</p>
-                <textarea class="textarea" id="question4" placeholder="Write your reflection here..."></textarea>
             </div>
             
             <div class="action-buttons">
@@ -410,7 +478,7 @@
             </div>
             
             <div class="back-button-container">
-                <a href="https://oeybers-cpu.github.io/all125_wk7_s1/  " class="back-button">
+                <a href="https://oeybers-cpu.github.io/all125_wk7_s1/" class="back-button">
                     <i class="fas fa-arrow-left"></i> Back to Assignment Page
                 </a>
             </div>
@@ -422,8 +490,7 @@
             const responses = {
                 question1: document.getElementById('question1').value || "(No response)",
                 question2: document.getElementById('question2').value || "(No response)",
-                question3: document.getElementById('question3').value || "(No response)",
-                question4: document.getElementById('question4').value || "(No response)"
+                question3: document.getElementById('question3').value || "(No response)"
             };
             return responses;
         }
@@ -434,14 +501,12 @@
             let content = "Critical Reflection: Decoloniality\n";
             content += "===============================================\n\n";
             content += `Date: ${date}\n\n`;
-            content += "Question 1: What did you learn about decoloniality today?\n";
+            content += "Question 1: How does your background shape your understanding of decoloniality...\n";
             content += `Response: ${responses.question1}\n\n`;
-            content += "Question 2: Can you think of examples of coloniality that are not necessarily between Africa and the Global North?\n";
+            content += "Question 2: How does your academic discipline approach knowledge production...\n";
             content += `Response: ${responses.question2}\n\n`;
-            content += "Question 3: What is the difference between migration and decoloniality?\n";
+            content += "Question 3: What is your key takeaway and how has your understanding evolved...\n";
             content += `Response: ${responses.question3}\n\n`;
-            content += "Question 4: What is the relationship between decoloniality and interpreting one of your discipline's assignments?\n";
-            content += `Response: ${responses.question4}\n\n`;
             content += "This document was generated from the Academic Literacy assignment tool.";
             return content;
         }
